@@ -52,37 +52,38 @@
   {
     "token": "eyJ0eXAiOiJKV1QiLCJhbGciOi...",
     "user": {
-      "id": 1,
-      "name": "홍길동"
+      "id": 1, // 회원번호
+      "name": "홍길동", // 이름
+      "sex": "M", // 성별 "M" or "F"
+      "birth": 1999-05-08, // 생년월일
     }
   }
   ```
 
   - **실패**:
-    - **400 Bad Request**: 잘못된 요청 형식.
-      ```json
+  -- **400 Bad Request**: 잘못된 요청 형식.
+  ```json
       {
         "status": "error",
         "message": "Invalid id or password format"
       }
-      ```
-    - **401 Unauthorized**: 잘못된 자격 증명.
-      ```json
+  ```
+  - **401 Unauthorized**: 잘못된 자격 증명.
+  ```json
       {
         "status": "error",
         "message": "Invalid id or password"
       }
-      ```
+  ```
 
 ---
 
 ### 2. 도서 조회
 
-- **URL**: `/api/books`
+- **URL**: `/api/book`
 - **Method**: `GET`
 - **Headers**:
 
-  - `Authorization: Bearer {JWT_TOKEN}`
   - `X-API-KEY: {API_KEY}`
 
 - **Query Parameters**:
@@ -101,7 +102,7 @@
 
 ---
 
-### 3. 대출이력 조회
+### 3. 대출이력 조회(해당 회원의 전체대출이력)
 
 - **URL**: `/api/borrow/history`
 - **Method**: `GET`
