@@ -29,7 +29,7 @@
 
 ### 1. 로그인
 
-- **URL**: `/api/login`
+- **URL**: `/login`
 - **Method**: `POST`
 - **Headers**:
 
@@ -80,7 +80,7 @@
 
 ### 2. 도서 조회
 
-- **URL**: `/api/book`
+- **URL**: `/book`
 - **Method**: `GET`
 - **Headers**:
 
@@ -105,7 +105,7 @@
 
 ### 3. 대출이력 조회(해당 회원의 전체대출이력)
 
-- **URL**: `/api/borrow/history`
+- **URL**: `/borrow/history`
 - **Method**: `GET`
 - **Headers**:
 
