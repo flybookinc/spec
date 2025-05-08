@@ -87,7 +87,7 @@
   - `X-API-KEY: {API_KEY}`
 
 - **Query Parameters**:
-  - `isbn` (optional): ISBN 번호
+  - `isbn`: ISBN 번호
 
 - **Response**:
   - **성공 (200 OK)**:
@@ -96,7 +96,8 @@
     "book_id": 123,
     "title": "채식주의자",
     "isbn": "9788936480615",
-    "loan_state": "대출가능"
+    "loan_state": "대출가능", // 대출여부 "대출가능" or "대출중" or "대출불가",
+    "location": "A도서관"
   }
   ```
 
